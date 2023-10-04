@@ -1,0 +1,12 @@
+.header-ad {
+    width: 800px;
+    height: 160px;
+}
+
+.header-ad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+}

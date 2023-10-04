@@ -1,0 +1,68 @@
+.travel-tips-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.travel-tips-main-title,
+.travel-tips-title {
+    text-align: center;
+    margin: auto;
+}
+
+.travel-tips-main-paragraph{
+    text-align: center;
+    margin: auto;
+
+}
+
+.travel-tips-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 197px;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
+
+.travel-tips-card-container {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.travel-tips-card-content {
+    width: 100%;
+    position: relative;
+}
+
+.travel-tips-card-content img {
+    width: 100%;
+    height: 300px;
+}
+
+.travel-tips-card-title {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.travel-tips-card-text {
+    margin: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-tips-card-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.travel-tips-card-text li {
+    margin-bottom: 10px;
+}

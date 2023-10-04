@@ -1,0 +1,13 @@
+.sidebar-ad-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 400px;
+}
+
+.sidebar-ad {
+    width: 100%;
+    height: 100%;
+}
