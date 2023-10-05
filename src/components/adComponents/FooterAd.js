@@ -1,21 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "../../styles/FooterAd.css";
-import { useInView } from 'react-intersection-observer';
-import { useEventTracker } from '../../utils/useEventTracker.js';
+import {useAdDataHandler} from "../../utils/adDataHandlerHook";
 
-function FooterAd({imgSource, pageName}) { // maybe pageName
-        const { trackEvent } = useEventTracker();
-        const { ref, inView } = useInView();
-
-        useEffect(()=>{
-            if(inView){
-                trackEvent('adViewEvent', {adType: 'FooterAd', adSrcName: imgSource, page: pageName})
-            }
-        }, [inView, trackEvent, imgSource]);
-        const handleClick = () => {
-            trackEvent('adClickEvent', {adType: 'FooterAd', adSrcName: imgSource, page: pageName})
-        }
-
+function FooterAd({imgSource, pageName}) {
+    const {ref, handleClick} = useAdDataHandler('FooterAd', imgSource, pageName);
 
     return (
         <footer className="footer-ad-container" ref={ref}>

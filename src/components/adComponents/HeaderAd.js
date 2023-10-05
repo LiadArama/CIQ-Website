@@ -1,20 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import "../../styles/HeaderAd.css";
-import { useInView } from 'react-intersection-observer';
-import { useEventTracker } from '../../utils/useEventTracker.js';
+import {useAdDataHandler} from "../../utils/adDataHandlerHook";
 
 function HeaderAd({imgSource, pageName}){
-    const { trackEvent } = useEventTracker();
-    const { ref, inView } = useInView();
-
-    useEffect(()=>{
-        if(inView){
-            trackEvent('adViewEvent', {adType: 'HeaderAd', adSrcName: imgSource, page: pageName})
-        }
-    }, [inView, trackEvent, imgSource]);
-    const handleClick = () => {
-        trackEvent('adClickEvent', {adType: 'HeaderAd', adSrcName: imgSource, page: pageName})
-    }
+    const {ref, handleClick} = useAdDataHandler('HeaderAd', imgSource, pageName);
 
     return (
         <header className="header-ad-container" ref={ref}>

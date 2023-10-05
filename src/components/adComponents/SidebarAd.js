@@ -1,22 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../styles/SidebarAd.css'
-import { useEventTracker } from "../../utils/useEventTracker";
-import { useInView } from "react-intersection-observer";
-
+import {useAdDataHandler} from "../../utils/adDataHandlerHook";
 
 function SidebarAd({imgSource, pageName}) {
-    const { trackEvent } = useEventTracker();
-    const { ref, inView } = useInView();
-
-    useEffect(()=>{
-        if(inView){
-            trackEvent('adViewEvent', {adType: 'SidebarAd', adSrcName: imgSource, page: pageName})
-        }
-    }, [inView, trackEvent, imgSource]);
-    const handleClick = () => {
-        trackEvent('adClickEvent', {adType: 'SidebarAd', adSrcName: imgSource, page: pageName})
-    }
-
+    const {ref, handleClick} = useAdDataHandler('SidebarAd', imgSource, pageName);
 
     return (
         <aside className="sidebar-ad-container" ref={ref}>
