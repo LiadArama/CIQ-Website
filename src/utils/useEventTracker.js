@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 const JSON_PORT = 3001;
 const ENDPOINTS = ['events'];
 const URL = `http://localhost:${JSON_PORT}/${ENDPOINTS[0]}`
@@ -36,13 +34,13 @@ const useEventTracker = () => {
     return {trackEvent}
 };
 
-const usePageView =  (pageName) => {
-    const { trackEvent } = useEventTracker();
+// const usePageView =  (pageName) => {
+//     const { trackEvent } = useEventTracker();
+//
+//     useEffect(()=>{
+//         trackEvent('pageView', {page: pageName});
+//
+//     }, [pageName, trackEvent])
+// };
 
-    useEffect(()=>{
-        trackEvent('pageView', {page: pageName});
-
-    }, [pageName, trackEvent])
-};
-
-export {useEventTracker, usePageView, sendEventData};
+export {useEventTracker, sendEventData};
