@@ -10,8 +10,8 @@ function Destinations(){
     usePageEventTracker('Destinations');
     return (
         <div className="destination-main-container">
-            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg"/>
-            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg"/><br/>
+            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg" pageName='Destinations'/>
+            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg" pageName='Destinations'/><br/>
             <h2 className="destination-main-title">Destinations:</h2><br/>
             <h3 className="destinations-content-title">Our Favorites:</h3><br/>
             <div className="destinations-content">
@@ -25,7 +25,7 @@ function Destinations(){
                     </div>
                 ))}
             </div>
-            <FooterAd imgSource="footer-hotel-travel-ad.jpg" />
+            <FooterAd imgSource="footer-hotel-travel-ad.jpg" pageName='Destinations'/>
         </div>
     );
 }

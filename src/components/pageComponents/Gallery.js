@@ -10,8 +10,8 @@ function Gallery(){
     usePageEventTracker('Gallery');
     return(
         <div className="gallery-container">
-            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg"/>
-            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg"/><br/>
+            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg" pageName='Gallery'/>
+            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg" pageName='Gallery'/><br/>
             <h2 className="gallery-main-title">Gallery</h2>
             <h3 className="gallery-title">Our Favorite Photos</h3>
             <div className="gallery-content-container">
@@ -22,7 +22,7 @@ function Gallery(){
                     </div>
                 ))}
             </div>
-            <FooterAd imgSource="footer-hotel-travel-ad.jpg" />
+            <FooterAd imgSource="footer-hotel-travel-ad.jpg" pageName='Gallery'/>
         </div>
     );
 }

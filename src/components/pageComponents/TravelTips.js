@@ -10,8 +10,8 @@ function TravelTips() {
     usePageEventTracker('TravelTips');
     return (
         <div className="travel-tips-container">
-            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg"/>
-            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg"/><br/>
+            <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg" pageName='TravelTips'/>
+            <SidebarAd imgSource="sidebar-travel-gear-mockup.jpg" pageName='TravelTips'/><br/>
             <h2 className="travel-tips-main-title">Travel Tips</h2><br/>
             <h3 className="travel-tips-title">Travelling soon? Some things to remember</h3><br/>
             <p className="travel-tips-main-paragraph">Here are some simple tips to keep in mind while travelling those destinations</p><br/><br/>
@@ -30,7 +30,7 @@ function TravelTips() {
                     </div>
                 ))}
             </div>
-            <FooterAd imgSource="footer-hotel-travel-ad.jpg" />
+            <FooterAd imgSource="footer-hotel-travel-ad.jpg" pageName='TravelTips'/>
         </div>
     );
 }

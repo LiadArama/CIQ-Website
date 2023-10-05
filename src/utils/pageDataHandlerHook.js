@@ -4,7 +4,7 @@ import { useEventTracker } from './useEventTracker';
 const usePageEventTracker = (pageName) => {
     const { trackEvent } = useEventTracker();
     let lastLoggedTime = 0;
-
+    let firstLoad = true;
     const handleExitIntent = (event) => {
         if(event.clientY < 50){
             const now = Date.now();
@@ -16,7 +16,10 @@ const usePageEventTracker = (pageName) => {
     };
 
     useEffect(() => {
-        trackEvent('pageLoad', {page: pageName});
+        if(firstLoad) {
+            trackEvent('pageLoad', {page: pageName});
+            firstLoad = false;
+        }
         const pageLoadTimestamp = new Date();
         document.addEventListener('mousemove', handleExitIntent);
 
