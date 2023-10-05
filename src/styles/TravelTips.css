@@ -1,34 +1,31 @@
 .travel-tips-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: calc(100% - 220px);
     padding: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 220px;
 }
 
 .travel-tips-main-title,
-.travel-tips-title {
+.travel-tips-title,
+.travel-tips-main-paragraph {
     text-align: center;
     margin: auto;
-}
-
-.travel-tips-main-paragraph{
-    text-align: center;
-    margin: auto;
-
 }
 
 .travel-tips-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 197px;
-    justify-content: center;
+    gap: 20px;
+    flex-direction: column ;
+    align-content: center;
     margin-bottom: 80px;
-
 }
 
 .travel-tips-card-container {
     width: 100%;
     max-width: 500px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -65,4 +62,15 @@
 
 .travel-tips-card-text li {
     margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+    .travel-tips-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .travel-tips-card-container {
+        max-width: 100%;
+    }
 }

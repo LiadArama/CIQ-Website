@@ -1,18 +1,24 @@
 .destination-main-container {
-    width: 85%;
+    width: calc(100% - 220px);
     padding: 20px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 220px;
 }
+
 
 .destination-card-expanded {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 120px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
+    width: 80%;
 }
+
 
 .destination-card-expanded img {
     width: 150px;
@@ -31,7 +37,12 @@
     text-align: left;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+    .destination-main-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
     .destination-card-expanded {
         flex-direction: column;
         align-items: flex-start;

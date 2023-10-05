@@ -1,14 +1,14 @@
-.welcome-homepage-title{
-    text-align: center;
-    margin: auto;
+.homepage-main-container {
+    width: calc(100% - 220px);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 220px;
 }
 
 
-.welcome-homepage-text{
-    text-align: center;
-    margin: auto;
-}
-
+.welcome-homepage-title,
+.welcome-homepage-text,
 .homepage-title {
     text-align: center;
     margin: auto;
@@ -42,4 +42,13 @@
     border-radius: 5px;
 }
 
+@media (max-width: 500px) {
+    .homepage-main-container {
+        width: 100%;
+        margin-right: 0;
+    }
 
+    .destination-card {
+        max-width: 100%;
+    }
+}

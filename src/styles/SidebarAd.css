@@ -5,9 +5,17 @@
     transform: translateY(-50%);
     width: 200px;
     height: 400px;
+    z-index: 999;
 }
 
 .sidebar-ad {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .sidebar-ad-container {
+        width: 30vw;
+        height: 60vh;
+    }
 }

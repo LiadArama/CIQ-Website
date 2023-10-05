@@ -1,5 +1,6 @@
-/* Navbar.css */
 .navbar {
+    position: relative;
+    z-index: 1000;
     list-style-type: none;
     margin-top: 20px;
     padding: 0;
