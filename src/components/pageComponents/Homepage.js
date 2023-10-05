@@ -1,11 +1,37 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import HeaderAd from "../adComponents/HeaderAd";
 import SidebarAd from "../adComponents/SidebarAd";
 import FooterAd from "../adComponents/FooterAd";
 import '../../styles/Homepage.css';
 import {destinations_data} from "../../mockup_data";
+import {useEventTracker} from "../../utils/useEventTracker";
 
+
+let lastLoggedTime = 0;
 function Homepage(){
+    const { trackEvent } = useEventTracker();
+    const handleExitIntent = (event) =>{
+        if(event.clientY < 50){
+            const now = Date.now();
+            if (now - lastLoggedTime > 1000) {
+            trackEvent('exitIntentEvent', {page:'Homepage'})
+                lastLoggedTime = now;
+            }
+        }
+    }
+
+    useEffect(() => {
+        const pageLoadTimestamp = new Date();
+        document.addEventListener('mousemove', handleExitIntent);
+
+        return () => {
+            document.removeEventListener('mousemove', handleExitIntent);
+            const pageExitTimestamp = new Date();
+            const timeSpentOnPage = pageExitTimestamp - pageLoadTimestamp;
+            const timeSpentInSeconds = timeSpentOnPage / 1000;
+            trackEvent('timeSpent', {page: 'Destinations', timeSpent: `${Math.round(timeSpentInSeconds)}s`});        };
+
+    }, [trackEvent]);
     return (
         <div className="homepage-main-container">
         <HeaderAd imgSource="header-travel-agency-mockup-ad.jpg"/>

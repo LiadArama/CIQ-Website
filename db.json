@@ -1,0 +1,92 @@
+{
+  "events": [
+    {
+      "eventType": "timeSpent",
+      "timestamp": 1696516710891,
+      "eventDetails": {
+        "page": "Destinations",
+        "timeSpent": "0s"
+      },
+      "id": 1
+    },
+    {
+      "eventType": "adViewEvent",
+      "timestamp": 1696516710945,
+      "eventDetails": {
+        "adType": "HeaderAd",
+        "adSrcName": "header-travel-agency-mockup-ad.jpg"
+      },
+      "id": 2
+    },
+    {
+      "eventType": "adViewEvent",
+      "timestamp": 1696516710946,
+      "eventDetails": {
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg"
+      },
+      "id": 3
+    },
+    {
+      "eventType": "adClickEvent",
+      "timestamp": 1696516764028,
+      "eventDetails": {
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg"
+      },
+      "id": 4
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696516772094,
+      "eventDetails": {
+        "page": "Homepage"
+      },
+      "id": 5
+    },
+    {
+      "eventType": "timeSpent",
+      "timestamp": 1696516783961,
+      "eventDetails": {
+        "page": "Destinations",
+        "timeSpent": "73s"
+      },
+      "id": 6
+    },
+    {
+      "eventType": "timeSpent",
+      "timestamp": 1696516783962,
+      "eventDetails": {
+        "page": "Destinations",
+        "timeSpent": "0s"
+      },
+      "id": 7
+    },
+    {
+      "eventType": "adViewEvent",
+      "timestamp": 1696516783967,
+      "eventDetails": {
+        "adType": "HeaderAd",
+        "adSrcName": "header-travel-agency-mockup-ad.jpg"
+      },
+      "id": 8
+    },
+    {
+      "eventType": "adViewEvent",
+      "timestamp": 1696516783967,
+      "eventDetails": {
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg"
+      },
+      "id": 9
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696516801634,
+      "eventDetails": {
+        "page": "Destinations"
+      },
+      "id": 10
+    }
+  ]
+}
