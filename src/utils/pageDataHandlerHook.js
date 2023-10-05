@@ -16,6 +16,7 @@ const usePageEventTracker = (pageName) => {
     };
 
     useEffect(() => {
+        trackEvent('pageLoad', {page: pageName});
         const pageLoadTimestamp = new Date();
         document.addEventListener('mousemove', handleExitIntent);
 
@@ -24,7 +25,9 @@ const usePageEventTracker = (pageName) => {
             const pageExitTimestamp = new Date();
             const timeSpentOnPage = pageExitTimestamp - pageLoadTimestamp;
             const timeSpentInSeconds = timeSpentOnPage / 1000;
-            trackEvent('timeSpent', {page: pageName, timeSpent: `${Math.round(timeSpentInSeconds)}s`});
+            if(timeSpentInSeconds > 1){
+                trackEvent('timeSpent', {page: pageName, timeSpent: `${Math.round(timeSpentInSeconds)}s`});
+            }
         };
     }, [trackEvent, pageName]);
 };
