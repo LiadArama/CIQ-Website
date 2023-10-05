@@ -34,13 +34,4 @@ const useEventTracker = () => {
     return {trackEvent}
 };
 
-// const usePageView =  (pageName) => {
-//     const { trackEvent } = useEventTracker();
-//
-//     useEffect(()=>{
-//         trackEvent('pageView', {page: pageName});
-//
-//     }, [pageName, trackEvent])
-// };
-
 export {useEventTracker, sendEventData};
