@@ -4,7 +4,7 @@ import SidebarAd from "../adComponents/SidebarAd";
 import FooterAd from "../adComponents/FooterAd";
 import '../../styles/Homepage.css';
 import {destinations_data} from "../../mockup_data";
-import {usePageEventTracker} from "../../utils/pageDataHandlerHook";
+import {usePageEventTracker} from "../../utils/usePageTracker";
 
 function Homepage(){
     usePageEventTracker('Homepage');

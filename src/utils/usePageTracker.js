@@ -9,7 +9,7 @@ const usePageEventTracker = (pageName) => {
         if(event.clientY < 50){
             const now = Date.now();
             if (now - lastLoggedTime > 1000) {
-                trackEvent('exitIntentEvent', {page: pageName});
+                trackEvent('exitIntentEvent', {page: pageName}, false);
                 lastLoggedTime = now;
             }
         }
@@ -17,7 +17,7 @@ const usePageEventTracker = (pageName) => {
 
     useEffect(() => {
         if(firstLoad) {
-            trackEvent('pageLoad', {page: pageName});
+            trackEvent('pageLoad', {page: pageName}, false);
             firstLoad = false;
         }
         const pageLoadTimestamp = new Date();
@@ -29,7 +29,7 @@ const usePageEventTracker = (pageName) => {
             const timeSpentOnPage = pageExitTimestamp - pageLoadTimestamp;
             const timeSpentInSeconds = timeSpentOnPage / 1000;
             if(timeSpentInSeconds > 1){
-                trackEvent('timeSpent', {page: pageName, timeSpent: `${Math.round(timeSpentInSeconds)}s`});
+                trackEvent('timeSpent', {page: pageName, timeSpent: `${Math.round(timeSpentInSeconds)}s`}, false);
             }
         };
     }, [trackEvent, pageName]);

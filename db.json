@@ -1,63 +1,168 @@
 {
-  "events": [
+  "page-events": [
     {
-      "eventType": "pageLoad",
-      "timestamp": 1696530806152,
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594328938,
       "eventDetails": {
         "page": "Homepage"
       },
       "id": 1
     },
     {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594330137,
+      "eventDetails": {
+        "page": "Homepage"
+      },
+      "id": 2
+    },
+    {
+      "eventType": "pageLoad",
+      "timestamp": 1696594330595,
+      "eventDetails": {
+        "page": "Homepage"
+      },
+      "id": 3
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594330829,
+      "eventDetails": {
+        "page": "Homepage"
+      },
+      "id": 4
+    },
+    {
+      "eventType": "timeSpent",
+      "timestamp": 1696594332144,
+      "eventDetails": {
+        "page": "Homepage",
+        "timeSpent": "2s"
+      },
+      "id": 5
+    },
+    {
+      "eventType": "pageLoad",
+      "timestamp": 1696594332145,
+      "eventDetails": {
+        "page": "Destinations"
+      },
+      "id": 6
+    },
+    {
+      "eventType": "timeSpent",
+      "timestamp": 1696594333665,
+      "eventDetails": {
+        "page": "Destinations",
+        "timeSpent": "2s"
+      },
+      "id": 7
+    },
+    {
+      "eventType": "pageLoad",
+      "timestamp": 1696594333665,
+      "eventDetails": {
+        "page": "TravelTips"
+      },
+      "id": 8
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594333903,
+      "eventDetails": {
+        "page": "TravelTips"
+      },
+      "id": 9
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594336057,
+      "eventDetails": {
+        "page": "TravelTips"
+      },
+      "id": 10
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594348182,
+      "eventDetails": {
+        "page": "TravelTips"
+      },
+      "id": 11
+    },
+    {
+      "eventType": "exitIntentEvent",
+      "timestamp": 1696594349224,
+      "eventDetails": {
+        "page": "TravelTips"
+      },
+      "id": 12
+    }
+  ],
+  "ad-events": [
+    {
       "eventType": "adViewEvent",
-      "timestamp": 1696530806209,
+      "timestamp": 1696594330603,
       "eventDetails": {
         "adType": "HeaderAd",
         "adSrcName": "header-travel-agency-mockup-ad.jpg",
+        "page": "Homepage"
+      },
+      "id": 1
+    },
+    {
+      "eventType": "adViewEvent",
+      "timestamp": 1696594330603,
+      "eventDetails": {
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg",
         "page": "Homepage"
       },
       "id": 2
     },
     {
       "eventType": "adViewEvent",
-      "timestamp": 1696530806209,
+      "timestamp": 1696594332150,
       "eventDetails": {
-        "adType": "SidebarAd",
-        "adSrcName": "sidebar-travel-gear-mockup.jpg",
-        "page": "Homepage"
+        "adType": "HeaderAd",
+        "adSrcName": "header-travel-agency-mockup-ad.jpg",
+        "page": "Destinations"
       },
       "id": 3
     },
     {
-      "eventType": "timeSpent",
-      "timestamp": 1696530809282,
+      "eventType": "adViewEvent",
+      "timestamp": 1696594332151,
       "eventDetails": {
-        "page": "Homepage",
-        "timeSpent": "3s"
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg",
+        "page": "Destinations"
       },
       "id": 4
     },
     {
-      "eventType": "pageLoad",
-      "timestamp": 1696530809282,
+      "eventType": "adViewEvent",
+      "timestamp": 1696594333673,
       "eventDetails": {
+        "adType": "HeaderAd",
+        "adSrcName": "header-travel-agency-mockup-ad.jpg",
         "page": "TravelTips"
       },
       "id": 5
     },
     {
       "eventType": "adViewEvent",
-      "timestamp": 1696530809292,
+      "timestamp": 1696594333673,
       "eventDetails": {
-        "adType": "HeaderAd",
-        "adSrcName": "header-travel-agency-mockup-ad.jpg",
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg",
         "page": "TravelTips"
       },
       "id": 6
     },
     {
-      "eventType": "adViewEvent",
-      "timestamp": 1696530809292,
+      "eventType": "adClickEvent",
+      "timestamp": 1696594372852,
       "eventDetails": {
         "adType": "SidebarAd",
         "adSrcName": "sidebar-travel-gear-mockup.jpg",
@@ -67,80 +172,13 @@
     },
     {
       "eventType": "adClickEvent",
-      "timestamp": 1696530813085,
+      "timestamp": 1696594373114,
       "eventDetails": {
-        "adType": "HeaderAd",
-        "adSrcName": "header-travel-agency-mockup-ad.jpg",
+        "adType": "SidebarAd",
+        "adSrcName": "sidebar-travel-gear-mockup.jpg",
         "page": "TravelTips"
       },
       "id": 8
-    },
-    {
-      "eventType": "adClickEvent",
-      "timestamp": 1696530813943,
-      "eventDetails": {
-        "adType": "SidebarAd",
-        "adSrcName": "sidebar-travel-gear-mockup.jpg",
-        "page": "TravelTips"
-      },
-      "id": 9
-    },
-    {
-      "eventType": "adViewEvent",
-      "timestamp": 1696530815673,
-      "eventDetails": {
-        "adType": "FooterAd",
-        "adSrcName": "footer-hotel-travel-ad.jpg",
-        "page": "TravelTips"
-      },
-      "id": 10
-    },
-    {
-      "eventType": "adViewEvent",
-      "timestamp": 1696530817405,
-      "eventDetails": {
-        "adType": "HeaderAd",
-        "adSrcName": "header-travel-agency-mockup-ad.jpg",
-        "page": "TravelTips"
-      },
-      "id": 11
-    },
-    {
-      "eventType": "timeSpent",
-      "timestamp": 1696530820974,
-      "eventDetails": {
-        "page": "TravelTips",
-        "timeSpent": "12s"
-      },
-      "id": 12
-    },
-    {
-      "eventType": "pageLoad",
-      "timestamp": 1696530820974,
-      "eventDetails": {
-        "page": "Gallery"
-      },
-      "id": 13
-    },
-    {
-      "eventType": "adViewEvent",
-      "timestamp": 1696530820979,
-      "eventDetails": {
-        "adType": "HeaderAd",
-        "adSrcName": "header-travel-agency-mockup-ad.jpg",
-        "page": "Gallery"
-      },
-      "id": 14
-    },
-    {
-      "eventType": "adViewEvent",
-      "timestamp": 1696530820979,
-      "eventDetails": {
-        "adType": "SidebarAd",
-        "adSrcName": "sidebar-travel-gear-mockup.jpg",
-        "page": "Gallery"
-      },
-      "id": 15
     }
   ]
 }

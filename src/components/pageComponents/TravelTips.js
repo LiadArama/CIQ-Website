@@ -4,7 +4,7 @@ import SidebarAd from "../adComponents/SidebarAd";
 import FooterAd from "../adComponents/FooterAd";
 import {destinations_data} from "../../mockup_data";
 import '../../styles/TravelTips.css';
-import {usePageEventTracker} from "../../utils/pageDataHandlerHook";
+import {usePageEventTracker} from "../../utils/usePageTracker";
 
 function TravelTips() {
     usePageEventTracker('TravelTips');

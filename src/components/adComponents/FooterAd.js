@@ -1,9 +1,9 @@
 import React from 'react';
 import "../../styles/FooterAd.css";
-import {useAdDataHandler} from "../../utils/adDataHandlerHook";
+import {useAdEventTracker} from "../../utils/useAdTracker";
 
 function FooterAd({imgSource, pageName}) {
-    const {ref, handleClick} = useAdDataHandler('FooterAd', imgSource, pageName);
+    const {ref, handleClick} = useAdEventTracker('FooterAd', imgSource, pageName);
 
     return (
         <footer className="footer-ad-container" ref={ref}>

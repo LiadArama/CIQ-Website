@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/SidebarAd.css'
-import {useAdDataHandler} from "../../utils/adDataHandlerHook";
+import {useAdEventTracker} from "../../utils/useAdTracker";
 
 function SidebarAd({imgSource, pageName}) {
-    const {ref, handleClick} = useAdDataHandler('SidebarAd', imgSource, pageName);
+    const {ref, handleClick} = useAdEventTracker('SidebarAd', imgSource, pageName);
 
     return (
         <aside className="sidebar-ad-container" ref={ref}>

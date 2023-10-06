@@ -1,9 +1,9 @@
 import React from 'react';
 import "../../styles/HeaderAd.css";
-import {useAdDataHandler} from "../../utils/adDataHandlerHook";
+import {useAdEventTracker} from "../../utils/useAdTracker";
 
 function HeaderAd({imgSource, pageName}){
-    const {ref, handleClick} = useAdDataHandler('HeaderAd', imgSource, pageName);
+    const {ref, handleClick} = useAdEventTracker('HeaderAd', imgSource, pageName);
 
     return (
         <header className="header-ad-container" ref={ref}>
